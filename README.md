@@ -20,11 +20,12 @@ uv run mcp install main.py
 
 ## 💬 Usage with Claude
 
-1. Open Claude Desktop App → Settings → Enable Developer Mode  
-2. Use prompts like:
+1. Open Claude Desktop App → Settings → Enable Developer Mode
+2. Restart Claude.
+3. Use prompts like:
 
 ```
-Call add_employee with emp_id=1001, name="Alice", and role="Engineer"
+Add an employee with id=1001, name="Alice", and role="Engineer"
 ```
 
 Claude will call your backend tool and return the result.
