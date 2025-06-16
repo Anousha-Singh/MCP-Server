@@ -1,16 +1,15 @@
 # db.py
 from pymongo import MongoClient
 
-# Connect to MongoDB (adjust URI if needed)
+# Connect to MongoDB 
 client = MongoClient("mongodb://localhost:27017/")
 
-# Create/use database and collection
 db = client["EmployeeManagementDB"]
 employee_collection = db["employees"]
 
 employee_collection.insert_one({"emp_id": 2001, "name": "John Doe", "role": "Software Engineer"})
 
-# Default entries (optional setup)
+# Default entries
 def initialize_db():
     if employee_collection.count_documents({"emp_id": 2002}) == 0:
         employee_collection.insert_one({"emp_id": 2002, "name": "Jane Smith", "role": "Intern"})
