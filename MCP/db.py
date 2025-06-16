@@ -7,7 +7,6 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["EmployeeManagementDB"]
 employee_collection = db["employees"]
 
-employee_collection.insert_one({"emp_id": 2001, "name": "John Doe", "role": "Software Engineer"})
 
 # Default entries
 def initialize_db():
